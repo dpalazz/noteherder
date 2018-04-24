@@ -16,7 +16,10 @@ class NoteForm extends Component {
       <div className="NoteForm">
         <div className="form-actions">
           <button type="button">
-            <i className="fa fa-trash-o"></i>
+            <i 
+              className="fa fa-trash-o"
+              onClick={this.props.removeCurrentNote}>
+            </i>
           </button>
         </div>
         <form>
