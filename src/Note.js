@@ -1,8 +1,9 @@
 import React from 'react'
 
 const Note = (props) => {
-  const handleClick = () => {
-    console.log('hi, i\'ve been handled.')
+  const handleClick = (ev) => {
+    console.log(this)
+    console.log(ev)
   }
   return (
     <a onClick={handleClick}>

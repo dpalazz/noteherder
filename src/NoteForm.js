@@ -8,7 +8,7 @@ class NoteForm extends Component {
       <div className="NoteForm">
         <div className="form-actions">
           <button type="button">
-            <i class="fa fa-trash-o"></i>
+            <i className="fa fa-trash-o"></i>
           </button>
         </div>
         <form>
