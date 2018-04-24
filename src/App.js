@@ -8,18 +8,7 @@ class App extends Component {
     super()
 
     this.state = {
-      notes: {
-        'note-4': {
-        id: 'note-4',
-        title: 'From App state',
-        body: 'The fanciest'
-        },
-        'note-5': {
-          id: 'note-5',
-          title: 'Another one',
-          body: 'Also very fancy'
-        },
-      },
+      notes: {},
       currentNote: this.blankNote(),
     }
   }
