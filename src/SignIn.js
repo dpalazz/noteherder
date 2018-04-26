@@ -3,12 +3,10 @@ import React from 'react'
 import { googleProvider, auth } from './base'
 import './SignIn.css'
 
-const SignIn = ({ handleAuth }) => {
+const SignIn = () => {
 
   const authenticate = () => {
-    auth
-    .signInWithPopup(googleProvider)
-    .then(handleAuth)
+    auth.signInWithPopup(googleProvider)
   }
 
   return(
