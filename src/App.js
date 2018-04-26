@@ -3,6 +3,7 @@ import base from './base'
 
 import './App.css'
 import Main from './Main'
+import SignIn from './SignIn'
 
 class App extends Component {
   constructor(){
@@ -11,6 +12,7 @@ class App extends Component {
     this.state = {
       notes: {},
       currentNote: this.blankNote(),
+      uid: null,
     }
   }
   
@@ -57,12 +59,25 @@ class App extends Component {
     this.resetCurrentNote()
   }
 
+  signedIn = () => {
+    return this.state.uid
+  }
+
+  handleAuth = () =>  {
+    this.setState({ uid: 'dpalazz' })
+  }
+
+  signOut = () => { 
+    this.setState({ uid: null })
+  }
+
   render() {
     const actions = {
       setCurrentNote: this.setCurrentNote,
       resetCurrentNote: this.resetCurrentNote,
       saveNote: this.saveNote,
       removeCurrentNote: this.removeCurrentNote,
+      signOut: this.signOut,
     }
 
     const noteData = {
@@ -71,9 +86,11 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Main 
-          {...noteData}
-          {...actions} />
+        {
+          this.signedIn() 
+          ? <Main {...noteData} {...actions} />
+          : <SignIn handleAuth={this.handleAuth} />
+        }
       </div>
     );
   }
