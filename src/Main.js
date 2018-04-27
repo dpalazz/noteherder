@@ -9,7 +9,6 @@ import NoteForm from './NoteForm'
 const Main = (props) => {
   const formProps = {
     notes: props.notes,
-    currentNoteId: props.currentNoteId,
     saveNote: props.saveNote,
     removeNote: props.removeNote,
   }
