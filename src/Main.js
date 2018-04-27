@@ -11,16 +11,12 @@ const Main = (props) => {
     notes: props.notes,
     currentNoteId: props.currentNoteId,
     saveNote: props.saveNote,
-    removeCurrentNote: props.removeCurrentNote,
   }
 
   return (
     <div className="Main">
-      <Sidebar 
-        resetCurrentNote={props.resetCurrentNote} 
-        signOut={props.signOut} />
-      <NoteList 
-        notes={props.notes} />
+      <Sidebar signOut={props.signOut} />
+      <NoteList notes={props.notes} />
 
       <Switch>
         <Route 
@@ -37,7 +33,6 @@ const Main = (props) => {
               {...navProps}/>
           )} />
       </Switch>
-      
     </div>
   )
 }
