@@ -2,6 +2,8 @@ import React from 'react'
 
 import { googleProvider, auth } from './base'
 import './SignIn.css'
+import quill from './quill.svg'
+import googleLogo from './google.svg'
 
 const SignIn = () => {
 
@@ -11,8 +13,20 @@ const SignIn = () => {
 
   return(
     <div className="SignIn">
-      <h1>SIGN IN NOW</h1>
-      <button onClick={authenticate}>Sign In</button>
+      <header className="Header">
+        <img src={quill} alt="" />
+        <span className="title">Noteherder</span>
+      </header>
+      <main>
+        <h3>Hey, Nerd! You Like Notes?</h3>
+        <p>You never know when you'll need to write crap down. In fact, you should probably be taking notes right now.</p>
+        <button 
+          className="google"
+          onClick={authenticate} >
+          <img src={googleLogo} alt="" />
+          Sign in with Google
+        </button>
+      </main>
     </div>
   )
 }
