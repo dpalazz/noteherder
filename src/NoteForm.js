@@ -56,7 +56,7 @@ class NoteForm extends Component {
           <button type="button">
             <i 
               className="fa fa-trash-o"
-              onClick={this.props.removeCurrentNote}>
+              onClick={() => this.props.removeNote(this.state.note)}>
             </i>
           </button>
         </div>

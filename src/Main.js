@@ -11,6 +11,7 @@ const Main = (props) => {
     notes: props.notes,
     currentNoteId: props.currentNoteId,
     saveNote: props.saveNote,
+    removeNote: props.removeNote,
   }
 
   return (
