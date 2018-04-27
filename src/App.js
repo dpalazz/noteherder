@@ -132,6 +132,7 @@ class App extends Component {
                     {...noteData} />
                 : <Redirect to='/sign-in' />
             )} />
+            <Route render={() => <Redirect to='/notes'/>} />
         </Switch>
       </div>
     )
